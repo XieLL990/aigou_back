@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active:
+      - dev # 默认使用环境是 dev
+---
+server:
+  port: 8001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+spring:
+  application:
+    name: LOGIN-PROVIDER
+  profiles: dev # 默认环境
+---
+server:
+  port: 8001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+spring:
+  application:
+    name: LOGIN-PROVIDER
+  profiles: test # 默认环境
