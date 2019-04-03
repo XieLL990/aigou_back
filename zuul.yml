@@ -20,7 +20,7 @@ zuul:
 spring:
   application:
     name: MICROSERVICE-ZUUL # 显示在服务注册中心的名字
-  profiles: dev # 默认使用环境
+  profiles: dev # 默认环境
 ---
 server:
   port: 9527 # 服务提供者提供服务的端口
