@@ -1,0 +1,42 @@
+spring:
+  profiles:
+    active:
+      - dev # 默认使用环境是 dev
+---
+server:
+  port: 8002 # 端口
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/ # 服务注册中心服务地址
+mybatis-plus:
+  mapper-locations: classpath:aigou/mapper/*Mapper.xml # xml映射文件
+  type-aliases-package: aigou.domain # 别名
+spring:
+  datasource: # 数据库链接信息
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/javastudy_aigou
+    username: root
+    password: 123456
+  application:
+    name: BRAND-PROVIDER # 服务名
+  profiles: dev # 默认环境
+---
+server:
+  port: 8002 # 端口
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/ # 服务注册中心服务地址
+mybatis-plus:
+  mapper-locations: classpath:aigou/mapper/*Mapper.xml # xml映射文件
+  type-aliases-package: aigou.domain # 别名
+spring:
+  datasource: # 数据库链接信息
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/javastudy_aigou
+    username: root
+    password: 123456
+  application:
+    name: BRAND-PROVIDER # 服务名
+  profiles: test # 测试环境
