@@ -34,8 +34,10 @@ zuul:
   routes:
     login.serviceId: login-provider
     login.path: /login/**  # 替代掉路由和具体的服务名
-    back.serviceId: back-provider
-    back.path: /back/**  # 替代掉路由和具体的服务名
+    provider.serviceId: back-provider
+    provider.path: /provider/**  # 替代掉路由和具体的服务名
+    consumer.serviceId: back-consumer
+    consumer.path: /consumer/**  # 替代掉路由和具体的服务名
 spring:
   application:
     name: MICROSERVICE-ZUUL # 显示在服务注册中心的名字
