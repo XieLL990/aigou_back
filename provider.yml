@@ -12,6 +12,9 @@ eureka:
 mybatis-plus:
   mapper-locations: classpath:aigou/mapper/*Mapper.xml # xml映射文件
   type-aliases-package: aigou.domain # 别名
+feign:
+  hystrix:
+    enabled: true # 开启断路器
 spring:
   datasource: # 数据库链接信息
     driver-class-name: com.mysql.jdbc.Driver
@@ -19,7 +22,7 @@ spring:
     username: root
     password: 123456
   application:
-    name: BACK-PROVIDER # 服务名
+    name: BRAND-PROVIDER # 服务名
   profiles: dev # 默认环境
 ---
 server:
@@ -31,6 +34,9 @@ eureka:
 mybatis-plus:
   mapper-locations: classpath:aigou/mapper/*Mapper.xml # xml映射文件
   type-aliases-package: aigou.domain # 别名
+feign:
+  hystrix:
+    enabled: true # 开启断路器
 spring:
   datasource: # 数据库链接信息
     driver-class-name: com.mysql.jdbc.Driver
@@ -38,5 +44,5 @@ spring:
     username: root
     password: 123456
   application:
-    name: BACK-PROVIDER # 服务名
+    name: BRAND-PROVIDER # 服务名
   profiles: test # 测试环境

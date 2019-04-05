@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active:
+      - dev # 默认使用环境是 dev
+---
+server:
+  port: 8003 # 端口
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/ # 服务注册中心服务地址
+spring:
+  application:
+    name: BACK-CONSUMER # 服务名
+    profiles: dev # 默认使用环境
+---
+server:
+  port: 8003 # 端口
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/ # 服务注册中心服务地址
+spring:
+  application:
+    name: BACK-CONSUMER # 服务名
+    profiles: test # 测试环境
