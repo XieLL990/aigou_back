@@ -13,6 +13,10 @@ eureka:
 spring:
   application:
     name: BACK-CONSUMER # 服务名
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes: 127.0.0.1:9300
     profiles: dev # 默认使用环境
 ---
 server:
@@ -25,4 +29,8 @@ eureka:
 spring:
   application:
     name: BACK-CONSUMER # 服务名
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes: 127.0.0.1:9300
     profiles: test # 测试环境
