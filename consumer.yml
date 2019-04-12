@@ -16,7 +16,7 @@ spring:
   data:
     elasticsearch:
       cluster-name: elasticsearch
-      cluster-nodes: 127.0.0.1:9300
+      cluster-nodes: 47.92.163.140:9300
     profiles: dev # 默认使用环境
 ---
 server:
@@ -32,5 +32,5 @@ spring:
   data:
     elasticsearch:
       cluster-name: elasticsearch
-      cluster-nodes: 127.0.0.1:9300
+      cluster-nodes: 47.92.163.140:9300
     profiles: test # 测试环境
